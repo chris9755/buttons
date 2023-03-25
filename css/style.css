@@ -89,6 +89,7 @@ body {
   left: -10%;
   transition: 0.5s 0.1s;
   transform: translate(-50%, -50%);
+  top: 50%;
 }
 
 .btn-1:hover .span1 {
@@ -123,4 +124,29 @@ body {
 
 .btn-2:hover::after {
   right: 0%;
+}
+
+.btn-4::before {
+  width: 100%;
+  border-right: solid 3px green;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  border-top-left-radius: 0px;
+}
+
+.btn-5::before {
+  background-image: linear-gradient(to right, rgba(224, 217, 217, 0), rgb(242, 245, 242));
+  height: 100%;
+  width: 100%;
+  left: -110%;
+  top: 0;
+  transform: skewX(-15deg);
+  transition: 0.8s;
+  z-index: -5;
+}
+
+.btn-5:hover::before {
+  left: 110%;
 }/*# sourceMappingURL=style.css.map */
