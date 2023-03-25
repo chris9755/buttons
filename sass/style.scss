@@ -14,7 +14,6 @@ body {
 .buttons {
 	display: inline-flex;
 	gap: 10px;
-    
 }
 
 .btn {
@@ -27,22 +26,22 @@ body {
 	border: solid 2px white;
 	border-radius: 7px;
 	background-color: transparent;
-    z-index: 1000;
-    overflow: hidden;
-    width: 150px;
+	z-index: 1000;
+	overflow: hidden;
+	width: 150px;
+    height: 75px;
 }
-.btn::after, .btn::before{
-    position: absolute;
-    content: '';
-
-
+.btn::after,
+.btn::before {
+	position: absolute;
+	content: "";
 }
 .btn-3 {
 	border: none;
 	transition: box-shadow 0.4s;
 }
-.btn-1{
-    transition: 1s;
+.btn-1 {
+	transition: 1s;
 }
 
 .btn-3:hover {
@@ -50,108 +49,132 @@ body {
 		inset 4px 6px 4px rgba(0, 0, 0, 0.3);
 }
 
-
-.btn-1::before{
-    border-left: 2px solid white;
-    top: 0px;
-    left: -10px;
-    height: 100%;
-    transition: 1s;
-
-
+.btn-1::before {
+	border-left: 2px solid white;
+	top: 0px;
+	left: -10px;
+	height: 100%;
+	transition: 1s;
 }
-.btn-1::after{
-    width: 100%;
-    border-top: 2px solid white;
-    top: -10px;
-    left: 0;
-    transition: 1s 0.1s;
-
+.btn-1::after {
+	width: 100%;
+	border-top: 2px solid white;
+	top: -10px;
+	left: 0;
+	transition: 1s 0.1s;
 }
 
-.btn-1:hover::before{
-    left: 110%;
-    top: 0px;
+.btn-1:hover::before {
+	left: 110%;
+	top: 0px;
 }
 
-.btn-1:hover::after{
-    top: 110%;
+.btn-1:hover::after {
+	top: 110%;
 }
-.span1{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    transition: 1.5s;
-    left: 50%;
-    top: 50%;
-
+.span1 {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	transition: 1.5s;
+	left: 50%;
+	top: 50%;
 }
-.span2{
-    position: absolute;
-    left: -10%;
-    transition: 0.5s 0.1s;
-    transform: translate(-50%, -50%);
-    top: 50%;
-
+.span2 {
+	position: absolute;
+	left: -10%;
+	transition: 0.5s 0.1s;
+	transform: translate(-50%, -50%);
+	top: 50%;
 }
-.btn-1:hover .span1{
-    left: 150%;
+.btn-1:hover .span1 {
+	left: 150%;
 }
-.btn-1:hover .span2{
-    left: 50%;
+.btn-1:hover .span2 {
+	left: 50%;
 }
 
+.btn-2::before {
+	width: 100%;
+	border-top: solid 55px royalblue;
+	top: 50%;
+	left: -110%;
+	transition: 0.5s;
+	z-index: -10;
+}
 
-.btn-2::before{
-    width: 100%;
-    border-top: solid 55px royalblue;
-    top: 50%;
-    left: -110%;
-    transition: 0.5s;
-    z-index: -10;
+.btn-2:hover::before {
+	left: 0%;
+}
 
+.btn-2::after {
+	width: 100%;
+	border-bottom: solid 55px royalblue;
+	bottom: 50%;
+	right: -110%;
+	transition: 0.5s;
+	z-index: -10;
+}
+
+.btn-2:hover::after {
+	right: 0%;
+}
+
+.btn-4 {
+    display: block;
+	border-radius: 0;
+    z-index: 100;
+    overflow: visible;
+}
+.btn-4:hover{
+border: none;
+color: green;
+}
+
+.btn-4::before {
+	top: 0;
+	width: 100%;
+	left: 0;
+	height: 100%;
+    transition: 0.7s;
 
 }
 
-.btn-2:hover::before{
-    left: 0%;
+.btn-4:hover::before {
+	top: -10px;
+	left: -10px;
+	border-top: solid 4px green;
+	border-left: solid 4px green;
 }
 
-.btn-2::after{
-    width: 100%;
-    border-bottom: solid 55px royalblue;
-    bottom: 50%;
-    right: -110%;
-    transition: 0.5s;
-    z-index: -10;
-}
-
-.btn-2:hover::after{
-    right: 0%;
-}
-.btn-3{
-
-}
-.btn-4::before{
-    width: 100%;
-    // border-bottom: solid 3px green ;
-    border-right: solid 3px green ;
-height: 100%;
-    // left: 0;
+.btn-4::after{
     bottom: 0;
     right: 0;
-    top: 0;
-    border-top-left-radius: 0px;
-}
-.btn-5::before{
-    background-image: linear-gradient(to right,rgba(224, 217, 217, 0), rgb(242, 245, 242));
-    height: 100%;
     width: 100%;
-    left: -110%;
-    top: 0;
-    transform: skewX(-15deg);
-    transition: 0.8s;
-    z-index: -5;
+    height: 100%;
+    transition: 0.7s;
 }
-.btn-5:hover::before{
-    left: 110%;
+.btn-4:hover::after{
+    right: -10px;
+    bottom: -10px;
+    border-right: solid 4px green;
+    border-bottom: solid 4px green;
+}
+
+
+.btn-5::before {
+	background-image: linear-gradient(
+		to right,
+		rgba(224, 217, 217, 0),
+		rgb(242, 245, 242)
+	);
+	height: 100%;
+	width: 100%;
+	left: -110%;
+	top: 0;
+	transform: skewX(-15deg);
+	transition: 0.8s;
+	z-index: -5;
+}
+.btn-5:hover::before {
+	left: 110%;
 }
