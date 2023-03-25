@@ -12,8 +12,9 @@ body {
 	background-color: #555;
 }
 .buttons {
-	display: flex;
+	display: inline-flex;
 	gap: 10px;
+    
 }
 
 .btn {
@@ -26,7 +27,9 @@ body {
 	border: solid 2px white;
 	border-radius: 7px;
 	background-color: transparent;
-    // overflow: hidden;
+    z-index: 1000;
+    overflow: hidden;
+    width: 150px;
 }
 .btn::after, .btn::before{
     position: absolute;
@@ -76,18 +79,51 @@ body {
 }
 .span1{
     position: absolute;
+    transform: translate(-50%, -50%);
     transition: 1.5s;
     left: 50%;
+    top: 50%;
 
 }
 .span2{
     position: absolute;
     left: -10%;
     transition: 0.5s 0.1s;
+    transform: translate(-50%, -50%);
+
 }
 .btn-1:hover .span1{
     left: 150%;
 }
 .btn-1:hover .span2{
     left: 50%;
+}
+
+
+.btn-2::before{
+    width: 100%;
+    border-top: solid 55px royalblue;
+    top: 50%;
+    left: -110%;
+    transition: 0.5s;
+    z-index: -10;
+
+
+}
+
+.btn-2:hover::before{
+    left: 0%;
+}
+
+.btn-2::after{
+    width: 100%;
+    border-bottom: solid 55px royalblue;
+    bottom: 50%;
+    right: -110%;
+    transition: 0.5s;
+    z-index: -10;
+}
+
+.btn-2:hover::after{
+    right: 0%;
 }
