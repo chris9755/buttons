@@ -120,13 +120,14 @@ body {
 }
 
 .btn-4 {
-    display: block;
+    display: flex;
+    justify-content: center;
 	border-radius: 0;
-    z-index: 100;
+    // z-index: 100;
     overflow: visible;
 }
 .btn-4:hover{
-border: none;
+border: solid 2px transparent;
 color: green;
 }
 
