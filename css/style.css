@@ -14,8 +14,81 @@ body {
 }
 
 .buttons {
-  display: inline-block;
-  gap: 20px;
-  width: 400px;
-  height: 50px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  position: relative;
+  padding: 15px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: white;
+  border: solid 2px white;
+  border-radius: 7px;
+  background-color: transparent;
+}
+
+.btn::after, .btn::before {
+  position: absolute;
+  content: "";
+}
+
+.btn-3 {
+  border: none;
+  transition: box-shadow 0.4s;
+}
+
+.btn-1 {
+  transition: 1s;
+}
+
+.btn-3:hover {
+  box-shadow: 2px 3px 0 0 rgba(255, 255, 255, 0.8), inset 4px 6px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-1::before {
+  border-left: 2px solid white;
+  top: 0px;
+  left: -10px;
+  height: 100%;
+  transition: 1s;
+}
+
+.btn-1::after {
+  width: 100%;
+  border-top: 2px solid white;
+  top: -10px;
+  left: 0;
+  transition: 1s 0.1s;
+}
+
+.btn-1:hover::before {
+  left: 110%;
+  top: 0px;
+}
+
+.btn-1:hover::after {
+  top: 110%;
+}
+
+.span1 {
+  position: absolute;
+  transition: 1.5s;
+  left: 50%;
+}
+
+.span2 {
+  position: absolute;
+  left: -10%;
+  transition: 0.5s 0.1s;
+}
+
+.btn-1:hover .span1 {
+  left: 150%;
+}
+
+.btn-1:hover .span2 {
+  left: 50%;
 }/*# sourceMappingURL=style.css.map */
